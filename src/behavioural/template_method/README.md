@@ -5,11 +5,16 @@
       +operation_one()
       +operation_two()
     }
-    class ConcreteClass{
+    class ConcreteClassOne{
       +operation_one()
       +operation_two()
     }
-    AbstractClass <|-- ConcreteClass
+    class ConcreteClassTwo{
+      +operation_one()
+      +operation_two()
+    }
+    AbstractClass <|-- ConcreteClassOne
+    AbstractClass <|-- ConcreteClassTwo
 ```
 
 `operation_one` and `operation_two` are abstract methods of `AbstractClass` which are implemented by a `ConcreteClass` and called by the `template_method`.
